@@ -5,34 +5,20 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-       <!--Import Google Icon Font-->
-       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-       <!--Import materialize.css-->
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
-       <style type="text/css">
-        nav.black-text a {
-          color: black;
-        }
-        nav .input-field label {
-          -webkit-transform: translateY(0px) !important;
-          transform: translateY(0px) !important;
-        }
-        .text-shadow {
-          text-shadow: -1px 1px 2px #000;
-        }
-        .opacity {
-          opacity: 0.9;
-        }
-        .overflow {
-          overflow: visible;
-        }
-      </style>
-          <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+
     <!--
       manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <!--
@@ -44,61 +30,78 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <style type="text/css">
+      nav.black-text a {
+        color: black;
+      }
+      nav .input-field label {
+        -webkit-transform: translateY(0px) !important;
+        transform: translateY(0px) !important;
+      }
+      .text-shadow {
+        text-shadow: -1px 1px 2px #000;
+      }
+      .opacity {
+        opacity: 0.9;
+      }
+      .overflow {
+        overflow: visible;
+      }
+    </style>
     <title>Laleo</title>
   </head>
   <body>
-       <!-- navbar -->
-       <nav class="white black-text" role="navigation">
-          <div class="nav-wrapper">
-            <a href="#" data-target="slide-out" class="sidenav-trigger" style="display: block;"><i class="material-icons">menu</i></a>
-            <a href="#" class="brand-logo left" style="left: auto;">
-              <span class="valign-wrapper">
-                <img class="responsive-img" src="./img/laleo20px.png" width="24" alt="laleo">
-                <strong class="hide-on-small-and-down" style="font-size: 18px;">LALEO</strong>
-                <span class="white-text">.</span>
-              </span>
-            </a>
-            <ul class="right">
-              <li><a href="#" class="purple-text text-darken-2">Entrar</a></li>
-              <li><a href="#" class="dropdown-trigger" data-target="menu"><i class="material-icons">more_vert</i></a>
-                <ul id="menu" class="dropdown-content">
-                  <li><a href="#!">one</a></li>
-                  <li><a href="#!">two</a></li>
-                  <li class="divider" tabindex="-1"></li>
-                  <li><a href="#!">three</a></li>
-                  <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-                  <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="right">
-              <div class="input-field">
-                <input id="search" type="search" placeholder="buscar" class="autocomplete" required>
-                <label class="label-icon" for="search"><i class="material-icons purple-text text-darken-2">search</i></label>
-                <i class="material-icons">close</i>
-              </div>
-            </form>
-          </div>
-        </nav>
-    <!-- sidenav -->
-    <ul id="slide-out" class="sidenav">
-        <li>
-          <div class="user-view">
-            <div class="background opacity">
-              <img class="responsive-img" src="img/products_laleo.png">
-            </div>
-            <a href="#user"><img class="circle" src="img/laleo.png"></a>
-            <a href="#name"><span class="amber-text text-darken-2 name text-shadow">John Doe</span></a>
-            <a href="#email"><span class="yellow-text text-accent-4 email text-shadow">jdandturk@gmail.com</span></a>
-          </div>
+   <!-- navbar -->
+   <nav class="white black-text" role="navigation">
+    <div class="nav-wrapper">
+      <a href="#" data-target="slide-out" class="sidenav-trigger" style="display: block;"><i class="material-icons">menu</i></a>
+      <a href="#" class="brand-logo left" style="left: auto;">
+        <span class="valign-wrapper">
+          <img class="responsive-img" src="./img/laleo20px.png" width="24" alt="laleo">
+          <strong class="hide-on-small-and-down" style="font-size: 18px;">LALEO</strong>
+          <span class="white-text">.</span>
+        </span>
+      </a>
+      <ul class="right">
+        <li><a href="#" class="purple-text text-darken-2">Entrar</a></li>
+        <li><a href="#" class="dropdown-trigger" data-target="menu"><i class="material-icons">more_vert</i></a>
+          <ul id="menu" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!">three</a></li>
+            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+          </ul>
         </li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
       </ul>
-
+      <form class="right">
+        <div class="input-field">
+          <input id="search" type="search" placeholder="buscar" class="autocomplete" required>
+          <label class="label-icon" for="search"><i class="material-icons purple-text text-darken-2">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+<!-- sidenav -->
+<ul id="slide-out" class="sidenav">
+  <li>
+    <div class="user-view">
+      <div class="background opacity">
+        <img class="responsive-img" src="./img/products_laleo.png">
+      </div>
+      <a href="#user"><img class="circle" src="./img/laleo.png"></a>
+      <a href="#name"><span class="amber-text text-darken-2 name text-shadow">John Doe</span></a>
+      <a href="#email"><span class="yellow-text text-accent-4 email text-shadow">jdandturk@gmail.com</span></a>
+    </div>
+  </li>
+  <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+  <li><a href="#!">Second Link</a></li>
+  <li><div class="divider"></div></li>
+  <li><a class="subheader">Subheader</a></li>
+  <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+</ul>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -110,7 +113,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-<!--JavaScript at end of body for optimized loading-->
+    <!--JavaScript at end of body for optimized loading-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script type="text/javascript">
@@ -119,7 +122,6 @@
     var autocomplete = document.querySelectorAll('.autocomplete');
     var dropdown = document.querySelectorAll('.dropdown-trigger');
     var carousel = document.querySelectorAll('.carousel');
-
     M.Sidenav.init(sidenav, {});
     M.Autocomplete.init(autocomplete, {
       data: {
@@ -135,7 +137,6 @@
     });
   });
 </script>
-
 
   </body>
 </html>

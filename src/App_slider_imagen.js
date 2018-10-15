@@ -78,10 +78,13 @@ class App extends Component {
   render() {
     return (
     <div className="App">
-    <SimpleSlider></SimpleSlider>
+    <header className="App-header">
+    
+    <img src={logo2} className="App-logo" alt="logo" />
+    </header>
       <p>Componente de estado</p>
       <Contador contadorInicial= {100}></Contador>
-      
+       <SimpleSlider></SimpleSlider>
 
     </div>
     );
