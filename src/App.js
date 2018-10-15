@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 //
 import logo from './logo.svg';
-import logo2 from './img/GRABADOS.png';
+import img1 from './img/GRABADOS.png';
+import img2 from './img/001.png';
+import img3 from './img/newbanner1.png';
+import img4 from './img/newbanner2.png';
 import './App.css';
 import Slider from "react-slick";
 
@@ -17,23 +20,18 @@ class SimpleSlider extends React.Component{
         return(
             <Slider {...settings}>
                     <div>
-                    <h3>1</h3>
+                    <h3><img src={img1} className="img_" alt="logo" /></h3>
                     </div>
                     <div>
-                    <h3>2</h3>
+                    <h3><img src={img2} className="img_" alt="logo" /></h3>
                     </div>
                     <div>
-                    <h3>3</h3>
+                    <h3><img src={img3} className="img_" alt="logo" /></h3>
                     </div>
                     <div>
-                    <h3>4</h3>
+                    <h3><img src={img4} className="img_" alt="logo" /></h3>
                     </div>
-                    <div>
-                    <h3>5</h3>
-                    </div>
-                    <div>
-                    <h3>6</h3>
-                    </div>
+
             </Slider>
         ) 
     }
