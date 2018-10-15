@@ -7,30 +7,52 @@ import img3 from './img/newbanner1.png';
 import img4 from './img/newbanner2.png';
 import './App.css';
 import Slider from "react-slick";
+import './menu1.css';
+
+
+
+class Card extends Component{
+    render(){
+        return(
+            <ul className="men">
+              <li className="li"><a href="#">Inicio</a></li>
+              <li className="li"><a href="#">Tendencias one</a></li>
+              <li className="li"><a href="#">Tendencias two</a></li>
+              <li className="li"><a href="#">tendencias three</a></li>
+              <li className="li"><a href="#">tendencias four</a></li>
+            </ul>
+        )
+    }
+}
+
 
 class SimpleSlider extends React.Component{
     render(){
-        var settings = {
+        const settings = {
             dots : true,
             infinite: true,
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1
         };
+     
+
         return(
             <Slider {...settings}>
-                    <div>
-                    <h3><img src={img1} className="img_" alt="logo" /></h3>
+                  
+                   <div >
+                        <img src={img1} className="img_" alt="logo" />
+                   </div>
+                        <div>
+                        <img src={img2} className="img_" alt="logo" />
+                        </div>
+                        <div>
+                        <img src={img3} className="img_" alt="logo" />
+                        </div>
+                        <div>
+                        <img src={img4} className="img_" alt="logo" />
                     </div>
-                    <div>
-                    <h3><img src={img2} className="img_" alt="logo" /></h3>
-                    </div>
-                    <div>
-                    <h3><img src={img3} className="img_" alt="logo" /></h3>
-                    </div>
-                    <div>
-                    <h3><img src={img4} className="img_" alt="logo" /></h3>
-                    </div>
+              
 
             </Slider>
         ) 
@@ -75,12 +97,16 @@ class ContadorNumero extends Component{
 class App extends Component {
   render() {
     return (
-    <div className="App">
-    <SimpleSlider></SimpleSlider>
+    <div className="App" >
+    <Card></Card>
+    <div class="slider_">
+      <SimpleSlider></SimpleSlider>
+
+    </div>
+    
+      <br></br>
       <p>Componente de estado</p>
       <Contador contadorInicial= {100}></Contador>
-      
-
     </div>
     );
   }

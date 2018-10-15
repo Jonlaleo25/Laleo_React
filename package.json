@@ -7,6 +7,7 @@
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5",
     "react-slick": "^0.23.1",
+    "react-view-slider": "^3.0.6",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
